@@ -52,7 +52,7 @@ public class Solution {
                     p3++;
                 }
             }
+            System.out.println(height1);
         }
-        System.out.println(height1);
     }
 }
