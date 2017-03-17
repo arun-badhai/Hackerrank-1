@@ -31,6 +31,7 @@ public class Solution {
             h3[h3_i] = in.nextInt();
             height3 = height3 + h3[h3_i];
         }
+        // All three stacks have the same height
         if(height1 == height2 && height2 == height3){
             System.out.println(height1);
         }
@@ -38,15 +39,23 @@ public class Solution {
             int p1 = 0;
             int p2 = 0;
             int p3 = 0;
+            
+            // Iterate till the stacks  have same height
             while(height1 != height2 || height2 != height3 || height1 != height3){
+                
+                // Remove element from stack 1, higher than stack 2 and 3
                 if(height1 > height2 || height1 > height3){
                     height1 = height1 -  h1[p1];
                     p1++;
                 }
+                
+                // Remove element from stack 2, higher than stack 1 and 3
                 else if(height2 > height1 || height2 > height3){
                     height2 = height2 -  h2[p2];
                     p2++;
                 }
+                
+                // Remove element from stack 3, higher than stack 1 and 2
                 else if(height3 > height1 || height3 > height2){
                     height3 = height3 -  h3[p3];
                     p3++;
