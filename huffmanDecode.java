@@ -4,6 +4,8 @@ void decode(String S ,Node root)
 {
     int length = S.length();
     StringBuilder sb = new StringBuilder();
+    
+    // Store the root to iterate back
     Node temp = root;
     for(int i=0;i<length;i++){
         if(S.charAt(i) == '1'){
